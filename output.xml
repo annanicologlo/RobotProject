@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.7 on win32)" generated="20221115 18:20:56.986" rpa="false" schemaversion="3">
+<suite id="s1" name="PremierKeywords" source="c:\Users\admin\Desktop\RobotFramework Project\TestCases\Scripts\PremierKeywords.robot">
+<test id="s1-t1" name="Test" line="20">
+<kw name="Login" library="Keywords">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<arg>${vUsername}</arg>
+<arg>${vPassword}</arg>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20221115 18:20:59.144" endtime="20221115 18:20:59.145"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221115 18:20:59.146" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8986/share/page/'.</msg>
+<status status="PASS" starttime="20221115 18:20:59.145" endtime="20221115 18:21:08.545"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221115 18:21:08.546" endtime="20221115 18:21:08.719"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_UserName}</arg>
+<arg>${vUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221115 18:21:08.723" level="INFO">Typing text '2203855' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20221115 18:21:08.721" endtime="20221115 18:21:08.922"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${vPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221115 18:21:08.923" level="INFO">Typing text '12345678' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20221115 18:21:08.922" endtime="20221115 18:21:09.040"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221115 18:21:09.042" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Connexion')]'.</msg>
+<status status="PASS" starttime="20221115 18:21:09.041" endtime="20221115 18:21:10.323"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lblTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221115 18:21:10.323" endtime="20221115 18:21:10.384"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${lblTitle}</arg>
+<arg>Tableau de bord de</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221115 18:21:10.434" level="INFO">Element 'xpath=//h1[@id='HEADER_TITLE']/span' contains text 'Tableau de bord de'.</msg>
+<status status="PASS" starttime="20221115 18:21:10.385" endtime="20221115 18:21:10.434"/>
+</kw>
+<status status="PASS" starttime="20221115 18:20:59.139" endtime="20221115 18:21:10.435"/>
+</kw>
+<kw name="Logout" library="Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221115 18:21:10.437" endtime="20221115 18:21:10.473"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221115 18:21:10.475" level="INFO">Clicking element 'id=HEADER_USER_MENU_POPUP_text'.</msg>
+<status status="PASS" starttime="20221115 18:21:10.474" endtime="20221115 18:21:10.581"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${link_HeaderDeconnexion}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221115 18:21:10.581" endtime="20221115 18:21:10.619"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_HeaderDeconnexion}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221115 18:21:10.620" level="INFO">Clicking element 'id=HEADER_USER_MENU_LOGOUT_text'.</msg>
+<status status="PASS" starttime="20221115 18:21:10.619" endtime="20221115 18:21:10.685"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221115 18:21:10.686" endtime="20221115 18:21:13.018"/>
+</kw>
+<status status="PASS" starttime="20221115 18:21:10.436" endtime="20221115 18:21:13.019"/>
+</kw>
+<status status="PASS" starttime="20221115 18:20:59.138" endtime="20221115 18:21:13.020"/>
+</test>
+<doc>Fichiers de scripts pour le module RQ3 : Sites.</doc>
+<status status="PASS" starttime="20221115 18:20:57.075" endtime="20221115 18:21:13.023"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="PremierKeywords">PremierKeywords</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
